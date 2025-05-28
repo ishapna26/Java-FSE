@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #welcomeBanner{
+            background-color: lightblue;
+        }
+        .highlight{
+            background-color: yellow;
+        }
+        .imc{
+            border: 2px solid black;
+            height: 220px;
+            width: 360px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Navigation-->
+    <nav>
+        <a href="#home">Home</a> |
+        <a href="#events">Events</a> |
+        <a href="#contact">Contact</a> |
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+
+    <!--Main-->
+    <section id="home">Home</section>
+    <section id="events">Events</section>
+    <section id="contact">Contact</section>
+
+    <div id="welcomeBanner">
+        <h1>WELCOME BACK!</h1>
+        <span class="highlight" style="color: red; font-weight: bold;" >Special Offers Available Now!</span>
+    </div>
+    <center>
+    <h2 style="margin-top: 20px;">IMAGE GALLERY</h2>
+    <table style="margin-top: 10px;">
+        <tr>
+            
+            <td><img src="img/img1.PNG" alt="image1" class="imc" title="Music Festival"></td>
+            <td><img src="img/img2.PNG" alt="image2" class="imc" title="Cultural Event"></td>
+            <td><img src="img/img3.PNG" alt="image3" class="imc" title="Art Exhibition"></td>
+        </tr>
+
+        <tr>
+            <td style="text-align:center; padding-bottom: 10px;">Music Fiesta '25</td>
+            <td style="text-align:center; padding-bottom: 10px">Cultural Extravaganza '25</td>
+            <td style="text-align:center; padding-bottom: 10px">Local Art Exhibition</td>
+        </tr>
+
+        <tr>
+            <td><img src="img/img4.png" alt="image4" class="imc" title="Health Checkup Camp"></td>
+            <td><img src="img/img5.png" alt="image5" class="imc" title="Sports Event"></td>
+            <td><img src="img/img6.png" alt="image6" class="imc" title="Maha Kumbh Event"></td>
+        </tr>
+
+        <tr>
+            <td style="text-align:center; padding-bottom: 10px">Free Health Checkup</td>
+            <td style="text-align:center; padding-bottom: 10px">Annual Sports Day</td>
+            <td style="text-align:center; padding-bottom: 10px">Maha Kumbh Festival</td>
+        </tr>
+
+    </table>
+    </center>
+    <br>
+    <hr>
+
+    <center>
+    <div style="margin-top: 30px;">
+    <h2 style="margin-bottom: 35px;">EVENT REGISTRATION FORM</h2>
+
+    <form onsubmit="showConfirmation(event)">
+        <table>
+            <tr>
+                <td>Name: </td><td><input type="text" placeholder="Enter your Name" required style="margin-bottom: 10px; height: 30px; width: 200px;" autofocus></td>
+            </tr>
+            <tr>
+                <td>Email: </td><td><input type="email" placeholder="Enter your Email" required style="margin-bottom: 10px; height: 30px; width: 200px;""></td>
+            </tr>
+            <tr>
+                <td>Date: </td><td><input type="date" required style="margin-bottom: 10px; height: 30px; width: 200px;"></td>
+            </tr>
+            <tr>
+                <td>Event Type: </td>
+                <td>
+                    <select style="height: 30px; width: 200px;">
+                        <option>Music Event</option>
+                        <option>Cultural Event</option>
+                        <option>Sports Event</option>
+                        <option>Cultural Event</option>
+                        <option>Religious Event</option>
+                        <option>Art Exhibition</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td><td><input type="submit" value="Register Event " style="margin-top: 20px; border-radius: 15px ; height: 30px;"></td>
+            </tr>
+        </table>
+    </form>
+    </center>
+    </div>
+
+    <output id="confirmation" style="color: green; font-weight: bold; display: block; margin-top: 20px;"></output>
+    <br>
+    <br>
+    <hr>
+
+    <script>
+    function showConfirmation(event) {
+        event.preventDefault(); 
+        document.getElementById("confirmation").textContent = "Thank you! Your registration was successful.";
+    }
+    </script>
+
+    
+
+
+    <!--Footer-->
+    
+</body>
+</html>
